@@ -11,13 +11,15 @@ require (sn)
 require (fGarch)
 require (hnp)
 
-setwd("G:/Meu Drive/DOCUMENTOS/ANDR…/MESTRADO UFAC PPGCC/DISCIPLINAS/ESTATÕSTICA COMPUTACIONAL/ATIVIDADE ENVELOPE SIMULADO")
+setwd("G:/Meu Drive/DOCUMENTOS/ANDR√â/MESTRADO UFAC PPGCC/DISCIPLINAS/ESTAT√çSTICA COMPUTACIONAL/ATIVIDADE ENVELOPE SIMULADO")
 dados <- read.table("A_FatCruz_ex1.txt", h = T)
 y <- dados[,2]
 
-n = 20
-mu = 22
-sigma = 4
+n = 10
+#n = 30
+#n = 100
+mu = 100
+sigma = 40
 
 #y <- rnorm(n, mu, sigma)
 
@@ -55,7 +57,7 @@ EQM_l = var(T0) + vicio_l^2; EQM_l
 vicio_s = mean(T1) - sigma
 EQM_s = var(T1) + vicio_s^2
 
-Tabela <- data.frame("VÌcios" = c(vicio_l, vicio_s),
+Tabela <- data.frame("V√≠cios" = c(vicio_l, vicio_s),
                      "EQMs" = c(EQM_l, EQM_s),
                      "Estimativa" = c(mu, sigma),
                      "Verdadeiro" = c(mu, sigma),
